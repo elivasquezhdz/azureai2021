@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+
+
+    <h5 class="card-header">Enter text here</h5>
+    <div class="card-body">
+      <form method="POST" action="">
+            {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+        <div class="form-group">
+            {{ form.text(class="form-control") }}
+ 
+        </div>
+
+        <div class = "form-group" >
+
+                {{ form.submit(class="btn btn-primary") }}
+        </div>
+        
+    
+
+
+        </fieldset>
+      </form>
+    </div>
+
+
+
+               
+{% endblock %}

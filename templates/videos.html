@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+
+
+    <h5 class="card-header">Enter text here</h5>
+    <div class="card-body">
+        <p class="lead">All the results are listed here
+
+            {% for post in posts %}
+                <ul>
+                    <li> <a href={{post}}>{{post}}</li>
+
+                </ul>
+        {% endfor %}
+    </div>
+
+
+
+               
+{% endblock %}
