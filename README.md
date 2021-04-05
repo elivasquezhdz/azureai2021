@@ -28,7 +28,10 @@ Much improvement on the NLP side is needed. We can also improve the slides gener
 
 # Usage
 _pip install -r requirements_
+
 _python manage.py_
+
 _visit http://localhost_
+
 or try the [live demo ](http://70.37.89.237/)
 
