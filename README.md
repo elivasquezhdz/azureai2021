@@ -4,7 +4,7 @@ Azure AI Hackathon submission
 # Inspiration
 The fun art of creating videos slideshows, most of the time requires the tedious task of looking for images and narrating the text when necessary.
 
-We've been inspired by the <a href= https://www.youtube.com/watch?v=Jr9sptoLvJU>carykh Automatically making YouTube videos with Google Images </a>
+We've been inspired by the <a href="https://www.youtube.com/watch?v=Jr9sptoLvJU">carykh Automatically making YouTube videos with Google Images </a>
 
 # What it does
 This is a web app on which you paste the text , you can summarize if you want to. The app will search for Bing images, and join them. It will create text for narration with the Text to Speech API on Azure Cognitive Services.
