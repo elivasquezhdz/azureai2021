@@ -14,19 +14,19 @@ Develop a python web page to captureCancel changes the text to work with. Proces
 
 Generate the audio with the _Text to Speech Azure API _
 
-#Challenges we ran into
+# Challenges we ran into
 I was planning on submitting with friends help, but he could not help me, so I had to do all the work myself :(
 
-#Accomplishments that we're proud of
+# Accomplishments that we're proud of
 Finishing on time!
 
-#What we learned
+# What we learned
 More tools on Azure Cognitive Services
 
-#What's next for Video Generator
+# What's next for Video Generator
 Much improvement on the NLP side is needed. We can also improve the slides generation
 
-#Usage
+# Usage
 _pip install -r requirements_
 _python manage.py_
 _visit http://localhost_
