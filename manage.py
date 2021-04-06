@@ -1,3 +1,5 @@
+import os
+import uuid
 from flask import Flask, render_template,request,redirect,send_from_directory,url_for
 from forms import TextForm
 app = Flask(__name__)
@@ -11,7 +13,7 @@ def index():
 
 @app.route('/videos')
 def video():
-    videos = []
+    videos = [x for x in os.listdir("static") if x[-3:]=="mp4"]
     return render_template('videos.html',posts=videos)
 
 @app.route('/static/<path:path>')
@@ -26,7 +28,12 @@ def summarize():
     if form.validate_on_submit():
         text = form.text.data
         #flash(f'Account created for {form.username.data}!', 'success')
-        return render_template('results.html', name="asa")
+        uid = uuid.uuid4()
+        os.makedirs("results/{}".format(uid))
+        with open("results/{}/text.txt".format(uid),"w") as f:
+            f.write(text)
+        os.system("python process.py {}".format(uid))
+        return render_template('results.html', name=uid)
     return render_template('summarize.html', form=form)
 
 
@@ -37,8 +44,13 @@ def nosummarize():
     if form.validate_on_submit():
         text = form.text.data
         #flash(f'Account created for {form.username.data}!', 'success')
-        return render_template('results.html', name="asa")
-    return render_template('nosummarize.html', form=form)
+        uid = uuid.uuid4()
+        os.makedirs("results/{}".format(uid))
+        with open("results/{}/text.txt".format(uid),"w") as f:
+            f.write(text)
+        os.system("python process.py {}".format(uid))
+        return render_template('results.html', name=uid)
+    return render_template('summarize.html', form=form)
 
 
 if __name__ == '__main__':
