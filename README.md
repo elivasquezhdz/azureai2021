@@ -33,5 +33,7 @@ _python manage.py_
 
 _visit http://localhost_
 
+There should be 2 txt files [speech.txt,bing.txt] on the root folder which their respective API keys
+
 or try the [live demo ](http://70.37.89.237/)
 
