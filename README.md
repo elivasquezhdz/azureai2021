@@ -31,7 +31,7 @@ _pip install -r requirements_
 
 _python manage.py_
 
-_visit http://localhost_
+_visit http://localhost:5000
 
 There should be 2 txt files [speech.txt,bing.txt] on the root folder which their respective API keys
 
