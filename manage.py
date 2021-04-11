@@ -14,7 +14,8 @@ def index():
 @app.route('/videos')
 def video():
     videos = [x for x in os.listdir("static") if x[-3:]=="mp4"]
-    return render_template('videos.html',posts=videos)
+    uuids =  [x.split(".")[0] for x in videos]
+    return render_template('videos.html',posts=uuids)
 
 @app.route('/static/<path:path>')
 def send_static(path):
@@ -32,7 +33,7 @@ def summarize():
         os.makedirs("results/{}".format(uid))
         with open("results/{}/text.txt".format(uid),"w") as f:
             f.write(text)
-        os.system("python process.py {}".format(uid))
+        os.system("proces.bat {}".format(uid))
         return render_template('results.html', name=uid)
     return render_template('summarize.html', form=form)
 
